@@ -1,11 +1,12 @@
 from django.urls import path
 
+from main.views import index
 
 app_name = 'main'
 
 
 urlpatterns = [
-    # path('status_list/', ....as_view(), name='status_list'),
+    path('', index),
 
 ]
 
