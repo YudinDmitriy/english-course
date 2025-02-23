@@ -1,15 +1,14 @@
 import os
 import django
+from main.models import Question, Answer
 
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
 django.setup()
 
-from main.models import Question, Answer  
-
 
 def add_questions_and_answers():
-    
+    """функция для добавления вопросов в бд"""
     questions_data = [
         {
             'text': 'Which of the following is the MOST common purpose of a news report?',
@@ -29,6 +28,7 @@ def add_questions_and_answers():
             Answer.objects.create(question=question, text=answer_data['text'], is_correct=answer_data['is_correct'])
 
     print("Вопросы и ответы добавлены в базу данных!")
+
 
 if __name__ == '__main__':
     add_questions_and_answers()

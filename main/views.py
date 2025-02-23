@@ -1,4 +1,6 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
+from django.views.generic import TemplateView
 
 from main.models import Question, Answer
 
@@ -67,3 +69,36 @@ def test_eng(request):
 def results(request):
     return render(request, 'main/result.html')
 
+
+class SurveyTemplateView(TemplateView):
+    template_name = "main/survey.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["title"] = "Survey"
+        return context
+
+    def post(self, request, *args, **kwargs):
+        if request.method == "POST":
+            ex_1_1 = request.POST.get("ex_1_1")
+            ex_1_2 = request.POST.get("ex_1_2")
+            ex_1_3 = request.POST.get("ex_1_3")
+            ex_1_4 = request.POST.get("ex_1_4")
+            ex_2_1 = request.POST.get("ex_2_1")
+            ex_2_2 = request.POST.get("ex_2_2")
+            ex_2_3 = request.POST.get("ex_2_3")
+            ex_2_4 = request.POST.get("ex_2_4")
+            ex_3_1 = request.POST.get("ex_3_1")
+            ex_3_2 = request.POST.get("ex_3_2")
+            ex_3_3 = request.POST.get("ex_3_3")
+            ex_3_4 = request.POST.get("ex_3_4")
+            ex_4_1 = request.POST.get("ex_4_1")
+            ex_4_2 = request.POST.get("ex_4_2")
+            if ex_1_1 not in ('None', None):
+                print(f"Задание №1: 1.{ex_1_1},2.{ex_1_2},3.{ex_1_3},4.{ex_1_4}")
+                print(f"Задание №1.2: 1.{ex_2_1},2.{ex_2_2},3.{ex_2_3},4.{ex_2_4}")
+            if ex_3_1 not in ('None', None):
+                print(f"Задание №3: 1.{ex_3_1},2.{ex_3_2},3.{ex_3_3},4.{ex_3_4}")
+            if ex_4_1 not in ('None', None):
+                print(f"Задание №4: 1.{ex_4_1},2.{ex_4_2}")
+        return HttpResponseRedirect("/survey")

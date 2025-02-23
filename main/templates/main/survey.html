@@ -1,0 +1,128 @@
+{% extends 'main/base2.html' %}
+{% block content %}
+
+<p> </p>
+<p style="text-align: center;"><strong>Identifying Article Types and Structure (20 points)</strong></p>
+<p><strong>Instructions: </strong>Read the following excerpts and identify the type of article (News Report, Opinion Piece, Feature
+    Article, Scientific Report). Then, for each excerpt, identify the <strong>Thesis Statement (or main argument),</strong> and at least
+    <strong>two key supporting points.</strong>
+</p>
+<p><strong><mark>Exercise 1.</mark></strong></p>
+<p>
+    Recent studies have shown a strong correlation between screen time and mental health issues in teenagers. The
+    research, conducted by the National Institute of Mental Health, analyzed data from over 10,000 adolescents. The
+    findings revealed that teenagers who spend more than three hours per day on social media are at a significantly
+    higher risk of experiencing anxiety and depression. Researchers suggest that limiting screen time and promoting
+    healthy habits can improve mental well-being. These findings highlight the need for further investigation into the
+    impact of technology on adolescent mental health.
+</p>
+        <div class="card-body">
+            <form method="post" action="" class="form-floating">
+                {% csrf_token %}
+                <div class="col-9">
+                    <label for="message"><strong>Article Type: </strong></label>
+                    <textarea type="text" name="ex_1_1" class="form-control" id="ex_1_1" placeholder="Введите ответ" required></textarea>
+                </div>
+                <div class="col-9">
+                    <label for="message"><strong>Thesis Statement (or main argument):</strong></label>
+                    <textarea type="text" name="ex_1_2" class="form-control" id="ex_1_2" placeholder="Введите ответ" required></textarea>
+                </div>
+                <div class="col-9 ">
+                    <label for="message"><strong>Supporting Point 1:</strong></label>
+                    <textarea type="text" name="ex_1_3" class="form-control" id="ex_1_3" placeholder="Введите ответ" required></textarea>
+                </div>
+                <div class="col-9 mb-2">
+                    <label for="message"><strong>Supporting Point 2:</strong></label>
+                    <textarea type="text" name="ex_1_4" class="form-control" id="ex_1_4" placeholder="Введите ответ" required></textarea>
+                </div>
+                <p> </p>
+                <p><strong><mark>Exercise 2.</mark></strong></p>
+                <p>
+                    The proposed tax cuts for the wealthy are a misguided policy that will only exacerbate inequality in our society.
+                    Proponents of the cuts claim that they will stimulate the economy, but history shows that this "trickle-down" approach
+                    has never worked. Instead of benefiting everyone, these cuts will primarily benefit the rich, while leaving the middle
+                    class and working families behind. A fairer system would prioritize investments in education, healthcare, and
+                    infrastructure, which would create jobs and opportunities for all.
+                </p>
+                <div class="card-body">
+            <form method="post" action="" class="form-floating">
+                {% csrf_token %}
+                <div class="col-9">
+                    <label for="message"><strong>Article Type: </strong></label>
+                    <textarea type="text" name="ex_2_1" class="form-control" id="ex_2_1" placeholder="Введите ответ" required></textarea>
+                </div>
+                <div class="col-9">
+                    <label for="message"><strong>Thesis Statement (or main argument):</strong></label>
+                    <textarea type="text" name="ex_2_2" class="form-control" id="ex_2_2" placeholder="Введите ответ" required></textarea>
+                </div>
+                <div class="col-9 ">
+                    <label for="message"><strong>Supporting Point 1:</strong></label>
+                    <textarea type="text" name="ex_2_3" class="form-control" id="ex_2_3" placeholder="Введите ответ" required></textarea>
+                </div>
+                <div class="col-9 mb-2">
+                    <label for="message"><strong>Supporting Point 2:</strong></label>
+                    <textarea type="text" name="ex_2_4" class="form-control" id="ex_2_4" placeholder="Введите ответ" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-lg btn-block btn-outline-primary mb-5">Отправить</button>
+            </form>
+        </div>
+<p> </p>
+<p style="text-align: center;"><strong>Critical Analysis (30 points)</strong></p>
+
+<p><strong>Instructions: </strong>Read the following excerpt carefully. Then, answer the questions below in complete sentences.</strong>
+</p>
+<p>
+    "The use of artificial intelligence (AI) is rapidly transforming various aspects of our lives, from healthcare to
+    transportation. While AI offers numerous potential benefits, it also raises serious ethical concerns. Some experts
+    worry about the potential for AI to automate jobs, leading to widespread unemployment. Others are concerned about
+    the potential for AI to be used for malicious purposes, such as creating autonomous weapons. Furthermore, the lack
+    of transparency in AI algorithms raises questions about fairness and accountability. It is crucial that we address
+    these ethical challenges as we continue to develop and implement AI technologies."
+</p>
+<div class="card-body">
+            <form method="post" action="" class="form-floating">
+                {% csrf_token %}
+                <div class="col-9">
+                    <label for="message"><strong>Identify at least one potential bias or assumption that might be present in the author's perspective. (5 points)</strong></label>
+                    <textarea type="text" name="ex_3_1" class="form-control" id="ex_3_1" placeholder="Введите ответ" required></textarea>
+                </div>
+                <div class="col-9">
+                    <label for="message"><strong>Identify a logical fallacy that, if present, would weaken the author’s argument and explain why it would be a fallacy. (5 points)</strong></label>
+                    <textarea type="text" name="ex_3_2" class="form-control" id="ex_3_2" placeholder="Введите ответ" required></textarea>
+                </div>
+                <div class="col-9 ">
+                    <label for="message"><strong>What is the author's overall tone? Provide evidence from the text to support your answer. (10 points)</strong></label>
+                    <textarea type="text" name="ex_3_3" class="form-control" id="ex_3_3" placeholder="Введите ответ" required></textarea>
+                </div>
+                <div class="col-9 mb-2">
+                    <label for="message"><strong>What further information would you need to evaluate the author's claims? (10 points)</strong></label>
+                    <textarea type="text" name="ex_3_4" class="form-control" id="ex_3_4" placeholder="Введите ответ" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-lg btn-block btn-outline-primary mb-5">Отправить</button>
+                </form>
+</div>
+
+
+<p> </p>
+<p style="text-align: center;"><strong>Understanding Text Structure and Organization (15 points)</strong></p>
+
+<p><strong>Instructions: </strong>Read the following paragraph and identify the primary organizational structure used (e.g., Cause and Effect, Problem and Solution, Compare and Contrast, Chronological Order). Then, provide evidence from the text to support your answer.
+<br>"To address the growing problem of plastic pollution in our oceans, several solutions have been proposed. One approach is to reduce the production and consumption of single-use plastics. Another strategy is to improve waste management systems and increase recycling rates. Additionally, there are efforts to develop biodegradable alternatives to traditional plastics. While each of these solutions has its own challenges and limitations, they all offer promising pathways toward a cleaner and healthier ocean."
+</p>
+<div class="card-body">
+            <form method="post" action="" class="form-floating">
+                {% csrf_token %}
+                <div class="col-9">
+                    <label for="message"><strong>Organizational Structure: </strong></label>
+                    <textarea type="text" name="ex_4_1" class="form-control" id="ex_4_1" placeholder="Введите ответ" required></textarea>
+                </div>
+                <div class="col-9 mb-2">
+                    <label for="message"><strong>Evidence from the text:</strong></label>
+                    <textarea type="text" name="ex_4_2" class="form-control" id="ex_4_2" placeholder="Введите ответ" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-lg btn-block btn-outline-primary mb-5">Отправить</button>
+                </form>
+</div>
+
+{% endblock %}
