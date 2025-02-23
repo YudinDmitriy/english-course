@@ -1,0 +1,14 @@
+{% extends 'main/base2.html' %}
+{% block content %}
+<html>
+<head>
+    <title>Result</title>
+</head>
+<body>
+    <h1>Result</h1>
+    <p>Your score: {{ score }} / {{ total_questions }}</p>
+    {% comment %} <a href="{% url 'exerc_sect_1' %}">Take the quiz again</a> {% endcomment %}
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'main/base2.html' %}
+{% block content %}
+<head>
+    <meta charset="utf-8">
+    <title>Quiz</title>
+</head>
+<body>
+    <h1>Final Test: Multiple Choice</h1>
+    <p><strong>Instructions: Choose the best answer for each question. Each question is worth 2 points.</strong></p>
+    <form method="post">
+        {% csrf_token %}
+        {% for question in questions %}
+            <h4>{{ question.text }}</h4>
+            <ul>
+                {% for answer in question.answers.all %}
+                    <li>
+                        <label>
+                            <input type="radio" name="question_{{ question.id }}" value="{{ answer.id }}">
+                            {{ answer.text }}
+                        </label>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+{% endblock %}
