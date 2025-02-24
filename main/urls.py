@@ -1,7 +1,8 @@
 from django.urls import path
 
 from main.views import learning_content, educational_and_thematic_plan, glossary, info_author, \
-    introductory_info_section, exerc_sect_1, exerc_sect_2, exerc_sect_3, results, test_eng, SurveyTemplateView
+    introductory_info_section, exerc_sect_1, exerc_sect_2, exerc_sect_3, results, test_eng, SurveyTemplateView, \
+    meta_info
 
 app_name = 'main'
 
@@ -18,6 +19,7 @@ urlpatterns = [
     path('test_eng', test_eng, name='test_eng'),
     path('result', results, name='result'),
     path('survey', SurveyTemplateView.as_view(), name='survey'),
+    path('meta_info', meta_info, name='meta_info'),
 
 ]
 

@@ -40,6 +40,10 @@ def exerc_sect_3(request):
     return render(request, 'main/Exercises Section 3.html')
 
 
+def meta_info(request):
+    return render(request, 'main/Meta_information_module.html')
+
+
 def test_eng(request):
     questions = Question.objects.all()
     if request.method == 'POST':
